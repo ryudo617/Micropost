@@ -24,6 +24,14 @@
 
     <div class="row">
       <div class="large-7">
+        <br>
+          <% flash.each do |type, message| %>
+            <div class="secondary callout <%= flash_class type %>">
+              <%= message %>
+              <a href="#" class="close">&times;</a>
+            </div>
+          <% end %>
+
         <%= yield %>
       </div>
     </div> 
